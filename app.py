@@ -39,7 +39,7 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     model = tf.keras.models.load_model("./saved_model")
-    app.logger.info(f"Model loaded.")
+    app.logger.info("Model loaded.")
 
     json_payload = request.json
     app.logger.info(f"JSON payload: {json_payload}")
